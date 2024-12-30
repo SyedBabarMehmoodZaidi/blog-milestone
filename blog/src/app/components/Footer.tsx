@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div>
 
-    <div className="flex justify-center items-center h-auto bg-slate-600 mt-8">
+    <div className="flex justify-center items-center h-auto bg-green-600 mt-8">
     <div className="flex flex-col sm:flex-row justify-between items-center w-[90%] sm:w-[80%] gap-8">
       {/* Left Side: Heading and Paragraph */}
       <div className="flex flex-col items-start gap-4 m-16 text-white">

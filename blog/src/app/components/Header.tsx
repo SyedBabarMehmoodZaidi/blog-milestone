@@ -1,8 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
+import { FaBars } from 'react-icons/fa';
 import { IoCallOutline } from 'react-icons/io5';
 
-const Header = () => {
+
+
+interface Props {
+  openNav:() => void
+}
+
+
+const Header = ({openNav}:Props) => {
   return (
      <div>
     
@@ -12,6 +20,7 @@ const Header = () => {
 
         <div className="flex items-center space-x-1">
           <h1 className="text-[20px] sm:text-[30px] font-serif whitespace-nowrap tracking-widest">Bamsi Blog</h1>
+          
         </div>
 
 
@@ -21,13 +30,13 @@ const Header = () => {
             <Link href="/">HOME</Link>
           </li>
           <li className="text-[20px] font-bold hover:text-red-600">
-            <Link href="/About">ABOUT ME</Link>
+            <Link href="/about">ABOUT ME</Link>
           </li>
           <li className="text-[20px] font-bold hover:text-red-600">
-            <Link href="/About">BLOG</Link>
+            <Link href="/blog">BLOG</Link>
           </li>
           <li className="text-[20px] font-bold hover:text-red-600">
-            <Link href="/Contact">CONTACT</Link>
+            <Link href="/contact">CONTACT</Link>
           </li>
         </ul>
 
@@ -44,6 +53,10 @@ const Header = () => {
     <span className="font-bold whitespace-nowrap">+92 308 2735132</span>
 
   </button>
+
+  <div onClick={openNav} className='lg:hidden w-[2rem] h-[2rem] text-white'>
+  <FaBars />
+  </div> 
 
   {/* <div onClick={openNav} className='lg:hidden w-[2rem] h-[2rem] text-black'>
   <FaBars />

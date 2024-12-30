@@ -4,12 +4,12 @@ import React from 'react'
 const Hero = () => {
   return (
     <div >
-     <div className="w-full flex flex-col lg:flex-row justify-between items-center h-screen px-20 bg-gray-800">
+     <div className="w-full flex flex-col lg:flex-row justify-between items-center h-screen px-20 pt-8 pb-8 bg-gray-800">
   {/* Left Side: Text */}
   <div className="w-full lg:w-1/2 text-center lg:text-left">
     <h1 className="text-green-600 font-bold text-4xl">
       Welcome To The 
-      <span className="text-black font-bold block">
+      <span className="text-yellow-200 font-bold block">
         Nutrients Plants
       </span>
     </h1>
