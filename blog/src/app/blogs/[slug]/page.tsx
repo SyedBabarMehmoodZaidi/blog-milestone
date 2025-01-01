@@ -3,16 +3,16 @@ import Image from "next/image";
 import { Blog } from '@/app/components/Products';
 import CommentSection from '@/app/components/Comment';
 
-interface BlogPostProps {
+interface Params {
   params: {
     slug: string;
   };
 }
 
-export default async function BlogPost({ params }: BlogPostProps) {
-  const { slug } = params;
+export default async function BlogPost(params :Params) {
+  const { slug } = params.params;
 
-  const data: Blog[] = await client.fetch(
+  const data: Blog[] = await client.fetch( 
     `
     *[_type == "blog" && slug.current == $slug]{
       heading,
@@ -25,7 +25,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
   if (!data || data.length === 0) {
     return <div>No blog post found.</div>;
-  }
+  } 
 
   const item = data[0];
 
