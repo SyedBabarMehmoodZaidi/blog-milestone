@@ -4,19 +4,30 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <div className="relative w-full">
-        <Image src="/banner.jpg" alt="banner" layout="responsive" width={100} height={50} objectFit="cover" />
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-        
-        {/* Centered Text */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="font-bold text-6xl text-white">Hello, I&apos;m Babar Bamsi</h1>
-          <p className="font-bold text-2xl text-yellow-100">Babar Bamsi sells a variety of plants, bringing natural beauty to homes and spaces.</p>
-        </div>
-      </div>
+      <div className="relative w-full h-[50vh] md:h-[70vh]">
+  <Image
+    src="/banner.jpg"
+    alt="banner"
+    layout="fill"
+    objectFit="cover"
+    className="w-full h-full"
+  />
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+
+  {/* Centered Text */}
+  <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+    <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">
+      Hello, I&apos;m Babar Bamsi
+    </h1>
+    <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-yellow-100 mt-4">
+      Babar Bamsi sells a variety of plants, <br /> bringing natural beauty to homes and spaces.
+    </p>
+  </div>
+</div>
+
    
       <div>
-    <div className="h-screen bg-green-600 flex flex-col-reverse lg:flex-row items-center">
+    <div className="h-screen bg-green-600 flex flex-col-reverse lg:flex-row items-center mt-14">
       {/* Text Content */}
       <div className="w-full lg:w-1/2 flex flex-col justify-start items-start  lg:mt-28 px-8 lg:pl-[176px] gap-4">
         {/* Heading */}
@@ -50,18 +61,27 @@ const page = () => {
    
    
   <div>
-      <div className="relative w-full">
-        <Image src="/plants.jpg" alt="banner" layout="responsive" width={100} height={50} objectFit="cover" />
-        <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-        
-        {/* Centered Text */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="font-bold text-2xl  text-yellow-100">Services I Provide</h1>
-          <p className="font-bold text-4xl text-white">
-          Appreciated for consistently outperforming client expectations and providing exceptional results.
-          </p>
-        </div>
-      </div>
+  <div className="relative w-full h-[50vh] md:h-[70vh]">
+  <Image
+    src="/plants.jpg"
+    alt="banner"
+    layout="fill"
+    objectFit="cover"
+    className="w-full h-full"
+  />
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+
+  {/* Centered Text */}
+  <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+    <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-yellow-100">
+      Services I Provide
+    </h1>
+    <p className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mt-4">
+      Appreciated for consistently outperforming client <br /> expectations and providing exceptional results.
+    </p>
+  </div>
+</div>
+
 
       </div>
    

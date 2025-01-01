@@ -25,7 +25,7 @@ const Header = ({openNav}:Props) => {
 
 
         {/* Navbar links */}
-        <ul className="hidden lg:flex items-center justify-center space-x-10 h-full w-full">
+        <ul className="hidden lg:flex items-center justify-center space-x-10 h-full w-full cursor-pointer">
           <li className="text-[20px] font-bold hover:text-red-600">
             <Link href="/">HOME</Link>
           </li>

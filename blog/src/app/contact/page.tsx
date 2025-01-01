@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import CommentSection from '../components/Comment'
 
 const page = () => {
   return (
@@ -111,6 +112,8 @@ const page = () => {
            </div>
          </div>
        </div>
+
+       <CommentSection />
 
     </div>
   )
