@@ -3,7 +3,13 @@ import Image from "next/image";
 import { Blog } from '@/app/components/Products';
 import CommentSection from '@/app/components/Comment';
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+interface BlogPostProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default async function BlogPost({ params }: BlogPostProps) {
   const { slug } = params;
 
   const data: Blog[] = await client.fetch(
