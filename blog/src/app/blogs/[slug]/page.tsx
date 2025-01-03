@@ -4,28 +4,32 @@ import { Blog } from '@/app/components/Products';
 import CommentSection from '@/app/components/Comment';
 
 interface Params {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
+
+
 export default async function BlogPost(params :Params) {
-  const { slug } = params.params;
+
+  const { slug  } = await params.params;
 
   const data: Blog[] = await client.fetch( 
-    `
+   ` 
     *[_type == "blog" && slug.current == $slug]{
       heading,
       description,
       "slug": slug.current,
       "imageUrl": image.asset->url
-    }`,
+    } `,
     { slug }
   );
+  
 
   if (!data || data.length === 0) {
     return <div>No blog post found.</div>;
-  } 
+  }
 
   const item = data[0];
 

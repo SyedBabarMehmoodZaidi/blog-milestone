@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import { useState } from 'react';
 
 export default function CommentSection() {
   // State to manage the list of comments and input value
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState<string[]>([]);
   const [newComment, setNewComment] = useState('');
 
   // Function to handle comment submission
@@ -45,7 +45,7 @@ export default function CommentSection() {
         ) : (
           comments.map((comment, index) => (
             <div key={index} className="p-4 bg-white/20 rounded-md">
-              <p className="text-white">{comment}</p> {/* Set text color to black */}
+              <p className="text-white">{comment}</p>
             </div>
           ))
         )}
